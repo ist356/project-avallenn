@@ -1,0 +1,7 @@
+{
+  "tests.py::test_should_pass": true,
+  "tests.py::test_extract_ranking": true,
+  "tests.py::test_extract_stars": true,
+  "tests.py::test_extract_category": true,
+  "tests.py::test_extract_price": true
+}
