@@ -12,9 +12,9 @@ if category:
     st.write(f'Here are your options for {category}!')
     filtered_df = df[df['category'].str.contains(category)]
     st.dataframe(filtered_df)
+    st.header('Average Rating by Price Category')
 
     col1, col2 = st.columns(2)
-
     with col1:
         fig1, ax1 = plt.subplots()
         sns.barplot(data=filtered_df, x='price', y="stars", estimator = 'mean' , hue = 'price', ax=ax1)
@@ -25,8 +25,8 @@ if category:
         mean_stars = filtered_df.groupby('price')['stars'].mean()
         mean_stars = pd.DataFrame(mean_stars)
         max_stars = mean_stars['stars'].max()
-        price_max = mean_stars[mean_stars['stars'] == max_stars]
+        price_max = mean_stars[mean_stars['stars'] == max_stars].index.tolist()
         if len(price_max) > 1:
-            st.write(f"There are multiple price categories with the highest average rating of {max_stars}. Therefore, you should not try to proritize price when choosing a restaurant.")
+            st.write(f"There are multiple price categories with the highest average rating of {max_stars}. Therefore, you should not try to proritize price when choosing a {category} restaurant.")
         elif len(price_max) == 1:
-            st.write(f"The price category with the highest average rating is: {price_max} with a rating of {max_stars}")
+            st.write(f"The suggested price category to dine at for {category} cuisine is {price_max}, as it has an average rating of {max_stars}")
