@@ -17,7 +17,7 @@ if category:
     col1, col2 = st.columns(2)
     with col1:
         fig1, ax1 = plt.subplots()
-        sns.barplot(data=filtered_df, x='price', y="stars", estimator = 'mean' , hue = 'price', ax=ax1)
+        sns.barplot(data=filtered_df, x='price', y="stars", estimator = 'mean' , hue = 'price', ax=ax1, errorbar = None)
         ax1.set_ylim(3.9)
         st.pyplot(fig1)
 

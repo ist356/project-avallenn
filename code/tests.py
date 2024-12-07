@@ -21,30 +21,32 @@ TEST_DATA = pd.DataFrame({
 print(TEST_DATA)
 
 def test_extract_ranking():
-    text = TEST_DATA['restaurant'][0]
+    result_df = extract_ranking(TEST_DATA)
     expect = '1'
-    actual = extract_ranking(text)
+    actual = result_df['ranking'][0]
     print(f"Actual: {actual}, Expect: {expect}")
     assert expect == actual
 
 def test_extract_stars():
-    text = TEST_DATA['information'][2]
+    result_df = extract_stars(TEST_DATA)
     expect = '4.5'
-    actual = extract_stars(text)
+    actual = result_df['stars'][1]
     print(f"Actual: {actual}, Expect: {expect}")
     assert expect == actual
 
 def test_extract_category():
-    text = TEST_DATA['information'][1]
-    expect = 'American, Bar$$ - $$$Menu'
-    actual = extract_category(text)
+    result_df = extract_category(TEST_DATA)
+    expect = ' American, Bar'
+    actual = result_df['category'][1]
     print(f"Actual: {actual}, Expect: {expect}")
     assert expect == actual
 
 def test_extract_price():
-    text = TEST_DATA['category'][0]
+    result_df = extract_price(TEST_DATA)
     expect = 'Moderate'
-    actual = extract_price(text)
+    actual = result_df['price'][1]
+    print(f"Actual: {actual}, Expect: {expect}")
+    assert expect == actual
 
 if __name__ == "__main__":
     test_should_pass()
