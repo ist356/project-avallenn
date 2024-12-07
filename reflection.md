@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Student Email:  email
+Student Name:  Avery Allen
+Student Email:  avallen@syr.edu
 
 ## Instructions
 
@@ -22,4 +22,4 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
-
+I feel that this demonstartes my knowledge very well, as I was able to problem solve. The first problem I encountered was when I was scrapping trip advisor I kept getting shut down because it was coming up as a robot, so I decided to scrape from the web archieve to bypass this issue. Secondly, I was struggling on getting the information for each restaurant so I used co-pilot to help me. From this, I learned more ways I can use the .evaluate, specificaly the nextSiblingElement as it allows you to access the immediately following sibling element within the same parent node. For the functions I just had to do trial and error, which was ultimatley fixed through the creating tests for the functions. I am very proud of my final results because it something that everyone in the class can use. 
