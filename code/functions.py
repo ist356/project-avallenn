@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 #convert restaurants.csv to a dataframe
-rests = pd.read_csv('code/restaurants.csv')
+rests = pd.read_csv('cache/restaurants.csv')
 restaurants = pd.DataFrame(rests)
 
 def extract_ranking(df : pd.DataFrame):
@@ -44,7 +44,7 @@ def extract_price(df: pd.DataFrame):
     return df
 
 if __name__ == '__main__':
-    restaurants = extract_category(restaurants)
+    restaurants = extract_price(restaurants)
     st.dataframe(restaurants)
     #restaurants.to_csv('code/restaurantscleaned.csv', index=False)
     

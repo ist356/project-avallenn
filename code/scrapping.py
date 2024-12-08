@@ -21,7 +21,7 @@ def run(playwright: Playwright) -> None:
         data = rest, category
         list.append(data)
     df = pd.DataFrame(list, columns=['restaurant', 'information'])
-    df.to_csv('code/restaurants.csv', index=False)
+    df.to_csv('cache/restaurants.csv', index=False)
     #print(category)
     # ---------------------
     context.close()
