@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('code/restaurantscleaned.csv')
+df = pd.read_csv('cache/restaurantscleaned.csv')
 st.title('Discover Syracuse Restaurants')
 category_list = df['category'].str.split(',').explode().str.strip().unique()
 category = st.selectbox('What type of Food sounds good?', category_list)
