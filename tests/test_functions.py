@@ -1,5 +1,5 @@
 import pytest 
-from code.functions import extract_ranking, extract_stars, extract_category, extract_price
+from src.functions import extract_ranking, extract_stars, extract_category, extract_price
 import pandas as pd
 
 def test_should_pass():
